@@ -29,13 +29,7 @@ class Version:
 
     def __lt__(self, value: Version) -> bool:
         if isinstance(value, Version):
-            if (
-                self.__version[0] < value.__version[0]
-                or self.__version[0] == value.__version[0]
-                and self.__version[1] < value.__version[1]
-                or self.__version[:2] == value.__version[:2]
-                and self.__version[2] < value.__version[2]
-            ):
+            if self.__version < value.__version:
                 return True
         return NotImplemented
 

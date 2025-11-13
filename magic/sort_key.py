@@ -3,4 +3,4 @@ class SortKey:
         self.__args = args
 
     def __call__(self, cls) -> list:
-        return [cls.__dict__[a] for a in self.__args]
+        return [getattr(cls, a) for a in self.__args]

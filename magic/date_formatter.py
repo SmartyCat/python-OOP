@@ -16,7 +16,3 @@ class DateFormatter:
 
     def __call__(self, d: date) -> str:
         return d.strftime(DateFormatter.__d[self.__country_code])
-
-
-ca_format = DateFormatter("ca")
-print(ca_format(date(2022, 11, 7)))

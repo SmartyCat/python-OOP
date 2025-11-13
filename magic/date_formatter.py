@@ -2,7 +2,7 @@ from datetime import date
 
 
 class DateFormatter:
-    d = {
+    __d = {
         "ru": "%d.%m.%Y",
         "us": "%m-%d-%Y",
         "ca": "%Y-%m-%d",
@@ -15,7 +15,7 @@ class DateFormatter:
         self.__country_code = country_code
 
     def __call__(self, d: date) -> str:
-        return d.strftime(DateFormatter.d[self.__country_code])
+        return d.strftime(DateFormatter.__d[self.__country_code])
 
 
 ca_format = DateFormatter("ca")

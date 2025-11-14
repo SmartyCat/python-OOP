@@ -27,7 +27,6 @@ class RomanNumeral:
     def __str__(self) -> str:
         return self.__number
 
-    @staticmethod
     def from_int(self: RomanNumeral, other: RomanNumeral, func: Callable) -> str:
         result = []
         number = (
@@ -65,15 +64,10 @@ class RomanNumeral:
 
     def __add__(self, other: RomanNumeral) -> RomanNumeral:
         if isinstance(other, RomanNumeral):
-            return RomanNumeral(RomanNumeral.from_int(self, other, self.__add__))
+            return RomanNumeral(self.from_int( other, self.__add__))
         return NotImplemented
 
     def __sub__(self, other: RomanNumeral) -> RomanNumeral:
         if isinstance(other, RomanNumeral):
-            return RomanNumeral(RomanNumeral.from_int(self, other, self.__sub__))
+            return RomanNumeral(self.from_int( other, self.__sub__))
         return NotImplemented
-
-
-number = RomanNumeral("X") - RomanNumeral("VI")
-print(number)
-print(int(number))

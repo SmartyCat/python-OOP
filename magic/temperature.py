@@ -13,7 +13,7 @@ class Temperature:
 
     @classmethod
     def from_fahrenheit(cls, fahrenheit: int | float) -> Temperature:
-        return Temperature((fahrenheit - 32) * 5 / 9)
+        return cls((fahrenheit - 32) * 5 / 9)
 
     def __bool__(self) -> bool:
         return self.__temperature > 0

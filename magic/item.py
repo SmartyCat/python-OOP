@@ -1,15 +1,14 @@
 class Item:
     def __init__(self, name: str, price: int | float, quantity: int) -> None:
-        self.name, self.price, self.quantity, self.total = (
-            name.capitalize(),
+        self.__name, self.price, self.quantity = (
+            name,
             price,
             quantity,
-            price * quantity,
         )
 
-
-course = Item("pygen", 3900, 2)
-print(course.name)
-print(course.price)
-print(course.quantity)
-print(course.total)
+    def __getattr__(self, name: str) -> int | float | str:
+        if name == "total":
+            return self.price * self.quantity
+        elif name == "name":
+            return self.__name.capitalize()
+        return None

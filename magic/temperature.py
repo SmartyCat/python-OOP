@@ -25,8 +25,3 @@ class Temperature:
         return float(self.__temperature)
 
 
-t = Temperature.from_fahrenheit(41)
-print(t)
-print(int(t))
-print(float(t))
-print(t.to_fahrenheit())

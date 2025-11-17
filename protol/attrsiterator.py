@@ -10,7 +10,7 @@ class AttrsIterator:
     def __iter__(self) -> AttrsIterator:
         return self
 
-    def __next__(self) -> Any:
+    def __next__(self) -> tuple:
         if self.__index == len(self.__obj):
             raise StopIteration
         self.__index += 1

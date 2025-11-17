@@ -7,7 +7,7 @@ class DevelopmentTeam:
 
     def add_junior(self, *args: str) -> None:
         for a in args:
-            self.__team["junior"].append((a, "juior"))
+            self.__team["junior"].append((a, "junior"))
 
     def add_senior(self, *args: str) -> None:
         for a in args:

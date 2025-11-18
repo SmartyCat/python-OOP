@@ -29,5 +29,5 @@ class AttrDict:
             self.__index = 0
             raise StopIteration
         self.__index += 1
-        return self.__data[self.__data.keys()[self.__index - 1]]
+        return self.__data[list(self.__data.keys())[self.__index - 1]]
 

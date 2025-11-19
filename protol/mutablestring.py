@@ -26,7 +26,7 @@ class MutableString:
     def __next__(self) -> str:
         self.__index += 1
         if self.__index == len(self.__string):
-            self.__index = 0
+            self.__index = -1
             raise StopIteration
         return self.__string[self.__index]
 

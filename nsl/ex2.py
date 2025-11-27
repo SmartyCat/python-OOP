@@ -1,3 +1,7 @@
+"""С помощью наследования и приведенной ниже схемы постройте
+иерархию пустых классов, описывающих геометрические фигуры:"""
+
+
 class Shape:
     pass
 
@@ -36,4 +40,3 @@ class Rectangle(Parallelogram):
 
 class Square(Rectangle):
     pass
-

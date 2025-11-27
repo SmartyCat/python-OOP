@@ -31,4 +31,3 @@ class CyclicList:
             self.__index = 0
         self.__index += 1
         return self.__iterable[self.__index - 1]
-

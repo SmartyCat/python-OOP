@@ -13,3 +13,12 @@ class Suppress:
         if exc_type in self.__exceptions:
             self.exception = exc_value
         return True
+
+# TEST_8:
+try:
+    with Suppress(ValueError) as context:
+        number = list(123)
+except TypeError:
+    pass
+
+print(context.exception)

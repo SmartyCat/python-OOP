@@ -54,20 +54,11 @@ class Summator:
 class SquareSummator(Summator):
     pow = 2
 
-    def total(self, n: int) -> int:
-        return super().total(n)
-
 
 class QubeSummator(Summator):
     pow = 3
-
-    def total(self, n: int) -> int:
-        return super().total(n)
 
 
 class CustomSummator(Summator):
     def __init__(self, m: int) -> None:
         self.pow = m
-
-    def total(self, n: int) -> int:
-        return super().total(n)

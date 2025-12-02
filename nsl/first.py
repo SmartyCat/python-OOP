@@ -21,6 +21,3 @@ class D(A):
 class E(B, D):
     pass
 
-
-# TEST_4:
-print(issubclass(E, A))
